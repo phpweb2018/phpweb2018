@@ -7,31 +7,41 @@
 	}
 
 	function existeUsuario($usuario) {
+    try{
 		include 'conexao.php';
-		$consulta = $bd->query("select * from usua ");
-		if ($consulta->num_rows > 0) {
-			while($usua = $consulta->fetch_object()) {
-				if ($usua->usua_nome == $usuario && $usua->usua_ativ == true ) {
-					return true;
-				}        
-    		}
-		} else {
-			return false;
-		}
+    $query = $bd->prepare("select * from usua where usua_nome = '{$usuario}' ;");
+    $query->execute();
+    while ($usua = $query->fetchObject()) {
+      if ($usua->usua_nome == $usuario && $usua->usua_ativ == true ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    }catch(PDOException  $e ){
+      return false;
+    }
 	}
 
 	function senhaValida($usuario,$senha) {
+    
+    try{
 		include 'conexao.php';
-		$consulta_senha = $bd->query(" select * from usua");	
-		if ($consulta_senha->num_rows > 0) {
-			while($usua = $consulta_senha->fetch_object()) {
-				if ($usua->usua_nome == $usuario && $usua->usua_senh == $senha ) {
-					return true;
-				}        
-    		}
-		} else {
-			return false;
-		}
+    $query = $bd->prepare("select * from usua 
+                           where
+                           usua_nome = '{$usuario}' and
+                           usua_senh = '{$senha}' ;");
+    $query->execute();
+    while ($usua = $query->fetchObject()) {
+      if ($usua->usua_nome == $usuario && $usua->usua_senh == $senha ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    }catch(PDOException  $e ){
+      return false;
+    }
 	}
 
 ?>

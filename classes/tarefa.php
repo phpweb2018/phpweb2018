@@ -93,7 +93,7 @@ class Tarefa
     if ($Obj->getTare_codi() == '--') {
       $Obj->setTare_codi($Obj->novoCodigo('sistema'));
     }
-    $consulta = $bd->query("select * from tare where tare_codi = {$Obj->getTare_codi()}");
+    $consulta = $bd->query("select * from tare where tare_codi = '{$Obj->getTare_codi()}' ");
     if (!$consulta) {
       $_SESSION['tipo'] = 'Erro de Banco de dados.';
       $_SESSION['mensagem'] = '<p class="text-danger">Não foi possível realizar a gravação do registro: .' . $bd->error . '</p>';
