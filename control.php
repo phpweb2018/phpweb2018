@@ -1,5 +1,4 @@
 <?php
-
 	function informadoUsuario($usuario) {
 		if (!(empty($usuario) || $usuario == '')) {
 			return true;
@@ -9,25 +8,30 @@
 
 	function existeUsuario($usuario) {
 		include 'conexao.php';
-		$query = $bd->prepare('select case when count(*) > 0 then true else false end as existe_usua 
-								from usua
-								where usua_nome = :nome ');	
-		$query->bindParam(':nome',$usuario);
-		$existe = $query->execute(); 
-		while ($result = $query->fetch()) 
-			 return $result['existe_usua'];
+		$consulta = $bd->query("select * from usua ");
+		if ($consulta->num_rows > 0) {
+			while($usua = $consulta->fetch_object()) {
+				if ($usua->usua_nome == $usuario && $usua->usua_ativ == true ) {
+					return true;
+				}        
+    		}
+		} else {
+			return false;
+		}
 	}
 
 	function senhaValida($usuario,$senha) {
 		include 'conexao.php';
-		$query = $bd->prepare('select case when count(*) > 0 then true else false end as usua_senh_validos 
-								from usua
-								where usua_nome = :nome and usua_senh = :senha ');	
-		$query->bindParam(':nome',$usuario);
-		$query->bindParam(':senha',$senha);
-		$existe = $query->execute(); 
-		while ($result = $query->fetch()) 
-			 return $result['usua_senh_validos'];
+		$consulta_senha = $bd->query(" select * from usua");	
+		if ($consulta_senha->num_rows > 0) {
+			while($usua = $consulta_senha->fetch_object()) {
+				if ($usua->usua_nome == $usuario && $usua->usua_senh == $senha ) {
+					return true;
+				}        
+    		}
+		} else {
+			return false;
+		}
 	}
 
 ?>

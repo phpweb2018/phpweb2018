@@ -3,4 +3,5 @@
 	$_SESSION['usuario'] = '';
 	$_SESSION['logado']  = false;
 	header("Location: index.php");
+	session_destroy();
 ?>

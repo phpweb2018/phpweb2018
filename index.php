@@ -4,6 +4,7 @@
   	<meta charset="utf-8">
   	<?php include 'control.php';?>
   	<?php include 'sessao_atv.php';?>
+    <link rel="icon" href="img/hass/Logo.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 
@@ -11,7 +12,6 @@
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 
-    <!-- Custumização CSS -->
     <link rel="stylesheet" href="principal.css">
 
 
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 
-	<?php include("modal.php");?>
+	<?php include("telas/genericas/modal.php");?>
 
 
     <script src="node_modules/jquery/dist/jquery.js"></script>

@@ -19,7 +19,7 @@
 		$_SESSION['logado'] = false;
 		$_SESSION['mensagem'] = 'Usuário <b>'.$usuario.'</b> não está cadastrado, verifique e tente novamente.';
 		header("Location: index.php");
-	}  elseif (!senhaValida($usuario,$senha,$usuarios)) {
+	}  elseif (!senhaValida($usuario,$senha)) {
 		$_SESSION['tipo'] = 'Senha Inválida.';
 		$_SESSION['logado'] = false;
 		$_SESSION['mensagem'] = 'Favor verifique a senha e tente novamente.';
