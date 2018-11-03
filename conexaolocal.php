@@ -1,11 +1,11 @@
  <?php
 
-$host = 'localhost:3306';
+$host = 'localhost:3307';
 $user = 'root';
 $password = '';
 $database = 'php2018';
 
-$bd = new mysqli($host,$user,$password,$database);
+$bd = new PDO('mysql:host=localhost;dbname=php2018;','root', '');
 $bd->set_charset('utf-8');
 
 if ($bd->connect_errno) {

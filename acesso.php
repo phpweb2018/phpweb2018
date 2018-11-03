@@ -15,10 +15,12 @@
 		$_SESSION['mensagem'] = 'Favor informar um usuário e tente novamente.';
 		header("Location: index.php");
 	} elseif (!existeUsuario($usuario)) {
+		include 'conexao.php';
+		$consulta = $bd->query("select * from usua ");
     $_SESSION['tipo'] = 'Usuário Inválido.';
 		$_SESSION['logado'] = false;
 		$_SESSION['mensagem'] = 'Usuário <b>'.$usuario.'</b> não está cadastrado, verifique e tente novamente.';
-		header("Location: index.php");
+		//header("Location: index.php");
 	}  elseif (!senhaValida($usuario,$senha)) {
 		$_SESSION['tipo'] = 'Senha Inválida.';
 		$_SESSION['logado'] = false;

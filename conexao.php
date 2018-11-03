@@ -1,15 +1,14 @@
 <?php
-	try {
-		$bd = "pgsql:"
-		    . "host=ec2-54-83-50-145.compute-1.amazonaws.com;"
-		    . "dbname=d1j91br7qn9g5i;"
-		    . "user=vasysywxnlwooi;"
-		    . "port=5432;"
-		    . "sslmode=require;"
-		    . "password=2919bf6469b71cab763a5e1990cad2de481927ecb7614c9577e899e811d774a6";
 
-		$bd = new PDO($bd);
-	} catch (PDOException $e) {
+	$host = "mysql762.umbler.com";
+	$usuario = "leonaldo";
+	$senha = "hass2018";
+	$bd = "hass";
+	
+	$mysqli = new mysqli($host,$usuario,$senha,$bd);
+	
+	
+	if($bd->connecti_errno){
 
 		session_start();
 		$_SESSION['tipo'] = 'Banco de Dados.';
