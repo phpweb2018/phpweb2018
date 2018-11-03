@@ -1,11 +1,11 @@
 <?php
 
 	$host = "mysql762.umbler.com";
-	$usuario = "leonaldo";
+	$usua = "leonaldo";
 	$senha = "hass2018";
 	$bd = "hass";
 	
-	$mysqli = new mysqli($host,$usuario,$senha,$bd);
+	$mysqli = new mysqli($host,$usua,$senha,$bd);
 	
 	
 	if($bd->connecti_errno){
