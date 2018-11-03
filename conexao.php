@@ -3,9 +3,9 @@
 	$host = "mysql762.umbler.com";
 	$usua = "leonaldo";
 	$senha = "hass2018";
-	$bd = "hass";
+	$database = "hass";
 	
-	$mysqli = new mysqli($host,$usua,$senha,$bd);
+	$bd = new mysqli($host,$usua,$senha,$database);
 	
 	
 	if($bd->connecti_errno){
