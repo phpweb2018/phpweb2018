@@ -12,12 +12,26 @@
 			<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 				<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 					<?php
-						require 'telas/cadastros/tela_tarefas.php';
+						if(isset($_GET['tp_tela'])){
+							switch($_GET['tp_tela']){
+								case 'cad_tarefas': require 'telas/cadastros/tela_tarefas.php';
+								break;
+								case 'cad_tickets': require 'telas/cadastros/tela_tickets.php';
+								break;
+							}
+						}
 					?>
 				</div>
 				<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 					<?php
-						require 'telas/genericas/tabela.php';
+						if(isset($_GET['tp_tela'])){
+							switch($_GET['tp_tela']){
+								case 'cad_tarefas': require 'telas/cadastros/tabela_tarefas.php';
+								break;
+								case 'cad_tickets': require 'teças/cadastros/tabelas/tabela_tickets.php';
+								break;
+							}
+						}
 					?>
 				</div>
 			</div>	

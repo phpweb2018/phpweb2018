@@ -14,12 +14,6 @@
 
     <link rel="stylesheet" href="principal.css">
 
-
-    <title>Login</title>
-</head>
-
-
-
 <body id="LoginForm">
 	<div class="container">
 			<div class="login-form">
@@ -43,6 +37,15 @@
     			</div>
 			</div>
 		</div>
+
+		<ui-view></ui-view>
+ 
+		<script src="//api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+<script>
+ var ht = new HT({
+ token: "87dc0bd483d96255f95e43d4379ba52b"
+ });
+</script>
 
 	<?php include("telas/genericas/modal.php");?>
 

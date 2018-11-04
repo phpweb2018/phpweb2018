@@ -19,9 +19,17 @@ class Tarefa
         while ($tarBD = $consulta->fetch_object()) {
           if ($tarBD->tare_codi == $tare_codi) {
             if ($quem_solicitou == 'sistema'){
-              return $tarBD->novo;
+              if ($tarBD->novo <= 0) {
+                return 1;
+              } else {
+                return $tarBD->novo;
+              }
             } elseif ($quem_solicitou == 'usuario'){
-              header("Location: ../menu.php?tp_tela=cad_tarefas&id_tarefa={$tarBD->novo}");
+              if ($tarBD->novo <= 0) {
+                header("Location: ../menu.php?tp_tela=cad_tarefas&id_tarefa=1");
+              } else {
+                header("Location: ../menu.php?tp_tela=cad_tarefas&id_tarefa={$tarBD->novo}");
+              }
             }
 
           }
@@ -52,6 +60,8 @@ class Tarefa
           $i++;
         }
         return $tarefas;
+      } else {
+        return null;
       }
     }
   }

@@ -30,10 +30,13 @@
                         <a href="menu.php?tp_tela=cad_grupos">Grupos</a>
                     </li> 
                     <li>
+                        <a href="menu.php?tp_tela=cad_clientes">Clientes</a>
+                    </li>
+                    <li>
                         <a href="#">Usuários</a>
                     </li>                    
                     <li>
-                        <a href="#">Ticket's</a>
+                        <a href="menu.php?tp_tela=cad_tickets">Ticket's</a>
                     </li>
                 </ul>
             </li>
