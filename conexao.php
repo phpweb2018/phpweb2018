@@ -16,6 +16,5 @@ if ($bd->connect_errno) {
 	//die($_SESSION['mensagem']);
 	header("Location: index.php");
 }
-// leonaldo lindo e gostoso
 ?> 
 
