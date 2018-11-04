@@ -21,7 +21,7 @@
 	}
 
 	function senhaValida($usuario,$senha) {
-		include 'conexao.php';
+    include 'conexao.php';
 		$consulta_senha = $bd->query(" select * from usua");	
 		if ($consulta_senha->num_rows > 0) {
 			while($usua = $consulta_senha->fetch_object()) {

@@ -17,7 +17,7 @@
 	} elseif (!existeUsuario($usuario)) {
 		include 'conexao.php';
 		$consulta = $bd->query("select * from usua ");
-    $_SESSION['tipo'] = 'Usuário Inválido.';
+    	$_SESSION['tipo'] = 'Usuário Inválido.';
 		$_SESSION['logado'] = false;
 		$_SESSION['mensagem'] = 'Usuário <b>'.$usuario.'</b> não está cadastrado, verifique e tente novamente.';
 		//header("Location: index.php");

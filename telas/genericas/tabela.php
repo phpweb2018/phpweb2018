@@ -29,20 +29,23 @@
                    $tarefas = array();
                    // $Tare = new Tarefa();
                    $tarefas = $tar->consultaTarefas();
-                   foreach($tarefas as $chave => $tarefa) {
-                       echo
-                       "<tbody>
-                           <tr>
-                           <td>{$tarefa->getTare_codi()}</td>
-                           <td>{$tarefa->getTare_titu()}</td>
-                           <td>{$tarefa->getTare_desc()}</td>
-                           <td>{$tarefa->getTare_stat()}</td>
-                           <td>
-                           <a href='menu.php?tp_tela=cad_tarefas&id_tarefa={$tarefa->getTare_codi()}' class='btn btn-block btn-sm btn-default'>
-                           <img width='23' height='23' src='https://png.icons8.com/color/48/cccccc/search.png'> Detalhar</a></td>
-                           </tr>
-                       </tbody>";
+                   if($tarefas != null){
+                    foreach($tarefas as $chave => $tarefa) {
+                        echo
+                        "<tbody>
+                            <tr>
+                            <td>{$tarefa->getTare_codi()}</td>
+                            <td>{$tarefa->getTare_titu()}</td>
+                            <td>{$tarefa->getTare_desc()}</td>
+                            <td>{$tarefa->getTare_stat()}</td>
+                            <td>
+                            <a href='menu.php?tp_tela=cad_tarefas&id_tarefa={$tarefa->getTare_codi()}' class='btn btn-block btn-sm btn-default'>
+                            <img width='23' height='23' src='https://png.icons8.com/color/48/cccccc/search.png'> Detalhar</a></td>
+                            </tr>
+                        </tbody>";
+                    }
                    }
+                   
                 ?>
 			</table>
 		</div>

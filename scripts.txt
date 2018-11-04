@@ -1,0 +1,27 @@
+create TABLE grup(
+ 	grupo_cod integer PRIMARY KEY,
+    grupo_nome varchar(150),
+    grupo_inclusao boolean,
+    grupo_alteraaco boolean,
+    grupo_exclusao boolean,
+    grupo_consulta boolean
+)
+
+create table clie(
+    clie_cod integer NOT NULL PRIMARY KEY,
+    clie_nome varchar(150),
+    clie_email varchar(100),
+    clie_nomeFantasia varchar(150),
+    clie_telefone varchar(14),
+    clie_CNPJ varchar(14),
+    clie_tipo varchar(10),
+    clie_situacao boolean,
+    clie_dataContrato Date,
+    clie_rua varchar(100),
+    clie_num integer,
+    clie_bairro varchar(100),
+    clie_complemento varchar(50),
+    clie_cidade varchar(100),
+    clie_uf char(2),
+    clie_obs varchar(300)
+)
