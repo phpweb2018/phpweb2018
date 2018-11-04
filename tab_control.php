@@ -28,7 +28,7 @@
 							switch($_GET['tp_tela']){
 								case 'cad_tarefas': require 'telas/cadastros/tabela_tarefas.php';
 								break;
-								case 'cad_tickets': require 'teças/cadastros/tabelas/tabela_tickets.php';
+								case 'cad_tickets': require 'telas/cadastros/tabelas/tabela_tickets.php';
 								break;
 							}
 						}

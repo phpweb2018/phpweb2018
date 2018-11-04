@@ -15,11 +15,11 @@
           $operacao = 'excluirCliente'; 
       }
   } elseif (buscaTitulo($_GET['tp_tela']) == 'Tickets') {
-    if (isset($_GET['id_cliente'])) {
-        $codi = $_GET['id_cliente']; 
+    if (isset($_GET['id_ticket'])) {
+        $codi = $_GET['id_ticket']; 
         $pergunta = 'Confirma a exclusão do cliente <b>'.$codi.'</b> ?';  
         $action = 'classes/cliente.php?id_cliente='.$codi;  
-        $operacao = 'excluirCliente'; 
+        $operacao = 'excluirTicket'; 
     }
   }
   } else {

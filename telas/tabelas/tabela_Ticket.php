@@ -24,11 +24,10 @@
                     <th>Prioridade</th>
                     <th>Situação</th>
                     <th>Criação</th>
+                    <th>Ação</th>
                 </tr>
                 </thead>
                 <?php
-                   
- 
                    $tickets = array();
                    // $Tare = new Tarefa();
                    $tickets = $tik->consultaTickets();
@@ -37,12 +36,16 @@
                         echo
                         "<tbody>
                             <tr>
-                            <td>{$ticket->getTick_codi()}</td>
-                            <td>{$ticket->getTare_titu()}</td>
-                            <td>{$ticket->getTare_desc()}</td>
-                            <td>{$ticket->getTare_stat()}</td>
+                            <td>{$ticket->getTick_ID()}</td>
+                            <td>{$ticket->getTick_titulo()}</td>
+                            <td>{$ticket->getTick_cliente()}</td>
+                            <td>{$ticket->getTick_responsavel()}</td>
+                            <td>{$ticket->getTick_departamento()}</td>
+                            <td>{$ticket->getTick_prioridade()}</td>
+                            <td>{$ticket->getTick_situacao()}</td>
+                            <td>{$ticket->getTick_criacao()}</td>
                             <td>
-                            <a href='menu.php?tp_tela=cad_tarefas&id_tarefa={$tarefa->getTare_codi()}' class='btn btn-block btn-sm btn-default'>
+                            <a href='menu.php?tp_tela=cad_tickets&id_ticket={$ticket->getTick_ID()}' class='btn btn-block btn-sm btn-default'>
                             <img width='23' height='23' src='https://png.icons8.com/color/48/cccccc/search.png'> Detalhar</a></td>
                             </tr>
                         </tbody>";
