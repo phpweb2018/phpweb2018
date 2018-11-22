@@ -1,0 +1,47 @@
+#dis_flecha {
+  /*FireFox*/
+  -moz-appearance: none;
+  /*Chrome*/
+  -webkit-appearance: none;
+}
+
+#label-form{
+	font-size: 16px;
+}
+
+#zera-MarginEpadding {
+  padding: 0rem !important;
+  margin: 0rem !important;
+  padding-top: 0rem !important;
+}
+
+#button-form-direita{
+  font-size: 20px;
+  float: right;
+}
+
+#button-form{
+  font-size: 20px;
+}
+
+#icon-form{
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#dados-ali-dir{
+  float: right;
+}
+
+#barra_nav{
+  margin-bottom: 0%;
+}
+
+#piechart{
+  width: 100%; 
+  height: 100%;
+}
+
+#chart_tick{
+  height: 480px;
+}
