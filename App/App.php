@@ -16,12 +16,14 @@ class App
     public function __construct()
     {
         //define('APP_HOST'       , $_SERVER['HTTP_HOST'] . "/ProjetoWebServidor");
-        define('APP_HOST'       , "phpweb2018.herokuapp.com");
+        //define('APP_HOST'       , "phpweb2018.herokuapp.com");
         //define('APP_HOST'       , "web2018.ml");
         //define('PATH'           , realpath('./'));
+        define('PATH'           , $_SERVER['DOCUMENT_ROOT']);
+        
         //define('PATH'           , realpath('hasssolucoes.ga'));
         //define('PATH'           , realpath('phpweb2018.herokuapp.com'));
-        //define('APP_HOST'       , $_SERVER['HTTP_HOST']);
+        define('APP_HOST'       , $_SERVER['HTTP_HOST']);
         define('TITLE'          , "Hass - Soluções");
         define('SSL_OR_NOT'     , "https://");
 
