@@ -30,10 +30,10 @@
         </a>
         <ul class="collapse list-unstyled" id="pageConsultas">
           <li>
-            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/Cliente" >Clientes</a>
+            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/cliente" >Clientes</a>
           </li>
           <li>
-            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/Usuario">Usuários</a>
+            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/usuario">Usuários</a>
           </li>                    
           <li>
             <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/ticket">Ticket's</a>
