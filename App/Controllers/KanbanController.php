@@ -17,7 +17,7 @@ class KanbanController extends Controller
         self::setViewParam('listaTickets-a',$ticketDAO->listar_situacao('Em Andamento'));
         self::setViewParam('listaTickets-f',$ticketDAO->listar_situacao('Finalizado'));
         
-        $this->render('kanban/index');
+        $this->render('/kanban/index');
 
         Sessao::limpaMensagem();
     }
