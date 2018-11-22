@@ -16,10 +16,10 @@
         </a>
         <ul class="collapse list-unstyled" id="pageCadastros">
           <li>
-            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/Cliente/cadastro" >Clientes</a>
+            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/cliente/cadastro" >Clientes</a>
           </li>
           <li>
-            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/Usuario/cadastro">Usuários</a>
+            <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/usuario/cadastro">Usuários</a>
           </li>                    
           <li>
             <a href="<?php echo SSL_OR_NOT.APP_HOST; ?>/ticket/cadastro">Ticket's</a>
